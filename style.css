@@ -109,7 +109,7 @@ header,
 
 .hero {
   display: flex;
-  /* gap: 2rem; */
+  gap: 2rem;
 
   place-items: center;
 
@@ -134,17 +134,14 @@ header,
   transform: scale(1.02, 1.01) skew(-15deg);
 }
 
-.hero-left {
-  width: 50%;
-}
-
 .hero-right {
-  width: 50%;
+  width: 40rem;
 
 }
 
 .hero-right img {
   width: 100%;
+  object-fit: cover;
 }
 
 .description {
@@ -182,12 +179,12 @@ header,
 .feature-text,
 .operation-text,
 .testimonial-text {
-  width: 65%;
+  width: 70%;
   margin: 0 auto;
 }
 
 .feature-container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 
   margin-top: 5rem;
@@ -209,10 +206,14 @@ header,
   margin-bottom: 5rem;
 }
 
+.feature-container-image {
+  width: 25rem;
+}
+
 .feature-container-one img,
 .feature-container-two img,
 .feature-container-three img {
-  width: 80%;
+  width: 100%;
 }
 
 .feature-container-text {
@@ -236,10 +237,21 @@ header,
 }
 
 .feature-icon {
-  width: 35px;
-  background-color: var(--color-primary);
-  padding: 8px;
-  border-radius: 20px;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-primary-opacity);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.feature-icon svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--color-primary);
 }
 
 .feature-container-text i {
@@ -321,6 +333,7 @@ header,
 /* testimonial */
 
 .testimonial-container {
+
   width: 55%;
   margin: 0 auto;
   margin-bottom: 10rem;
@@ -334,6 +347,20 @@ header,
 .testimonial-container-text {
   margin-top: 5rem;
   margin-bottom: 2rem;
+}
+
+.testimonial-quote {
+  position: relative;
+}
+
+.testimonial-quote::after {
+  position: absolute;
+  content: "\201C";
+  top: -6.5rem;
+  left: 12rem;
+  color: var(--color-primary);
+  font-size: 20rem;
+
 }
 
 .quote_icon {
