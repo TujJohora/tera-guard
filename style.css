@@ -70,16 +70,6 @@ header,
 
 /* navbar */
 
-/* .navbar-wrapper {
-  background-color: #fff;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-} */
-
 .navbar {
   display: flex;
   align-items: center;
@@ -118,21 +108,43 @@ header,
 /* hero */
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 2rem;
+  display: flex;
+  /* gap: 2rem; */
+
+  place-items: center;
 
   height: 80vh;
   padding: 0.5rem;
 }
 
 .hero-span {
+  position: relative;
+}
+
+.hero-span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: var(--color-primary);
+  height: 100%;
+  width: 15rem;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.02, 1.01) skew(-15deg);
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-right {
+  width: 50%;
+
 }
 
 .hero-right img {
-  width: 80%;
+  width: 100%;
 }
 
 .description {
@@ -397,6 +409,7 @@ footer {
   color: #fff;
   padding: 7rem 3rem;
 }
+
 .footer-content {
   display: flex;
   flex-direction: column;
