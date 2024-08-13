@@ -37,6 +37,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--light-gray);
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -120,7 +121,7 @@ header,
 .hero-span {
   position: relative;
 }
-
+/* changes */
 .hero-span::after {
   content: "";
   position: absolute;
@@ -136,7 +137,7 @@ header,
 
 .hero-right {
   width: 40rem;
-
+  overflow: hidden; /* new added */
 }
 
 .hero-right img {
@@ -206,14 +207,15 @@ header,
   margin-bottom: 5rem;
 }
 
+/* changes */
 .feature-container-image {
   width: 25rem;
+  overflow: hidden;
 }
-
-.feature-container-one img,
-.feature-container-two img,
-.feature-container-three img {
+/* changes */
+.feature-container-image img {
   width: 100%;
+  object-fit: cover;
 }
 
 .feature-container-text {
@@ -236,6 +238,7 @@ header,
   width: 70%;
 }
 
+/* new added */
 .feature-icon {
   width: 3.5rem;
   height: 3.5rem;
@@ -245,9 +248,9 @@ header,
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
+/* new added */
 .feature-icon svg {
   height: 1.5rem;
   width: 1.5rem;
@@ -333,7 +336,6 @@ header,
 /* testimonial */
 
 .testimonial-container {
-
   width: 55%;
   margin: 0 auto;
   margin-bottom: 10rem;
@@ -353,6 +355,7 @@ header,
   position: relative;
 }
 
+/* changes */
 .testimonial-quote::after {
   position: absolute;
   content: "\201C";
@@ -360,7 +363,6 @@ header,
   left: 12rem;
   color: var(--color-primary);
   font-size: 20rem;
-
 }
 
 .quote_icon {
@@ -466,6 +468,26 @@ footer {
 .footer-span {
   color: #a6a6a6;
   font-weight: 500;
+}
+
+/* changes */
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #37383d;
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.6rem;
+  box-shadow: 0 -1 1rem rgba(0, 0, 0, 0.1);
+}
+
+.cookies p {
+  color: #fff;
 }
 
 /* custom scrollbar */
